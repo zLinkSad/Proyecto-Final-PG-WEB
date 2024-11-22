@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Librería del Viajero</title>
+  <!-- Bootstrap css -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- my custom css -->
+  <link rel="stylesheet" href="css/custom.css">
+  <!-- fonts awesome -->
+  <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
+</head>
+<body>
+  <header>
+
+    <script>
+      // Obtener datos desde el servidor
+      fetch('http://bdlibreria:3000/api/usuarios')
+          .then(response => response.json())
+          .then(data => {
+              const list = document.getElementById('usuarios-list');
+              data.forEach(usuario => {
+                  const listItem = document.createElement('li');
+                  listItem.textContent = `Nombre: ${usuario.nombre}, Correo: ${usuario.correo}`;
+                  list.appendChild(listItem);
+              });
+          })
+          .catch(error => console.error('Error al obtener los datos:', error));
+  </script>
+    <!-- navegation -->
+    <div class="container-fluid p-0">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">La Librería del   Viajero</a>
+        <button class="navbar-toggler mr-2" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-align-right text-light"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- mueve el div hacia la derecha -->
+          <div class="mr-auto"></div>
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Libros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Colección</a>
+            </li>
+            <li class="nav-item dropdown">
+              <div class="dropdown">
+                <a href="#" class="nav-link">Género</a>
+                <div class="dropdown-content">
+                  <a href="#">Romantico</a>
+                  <a href="#">Terror</a>
+                </div>               
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Super-Ventas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Acerca de</a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- end navegation -->
+
+    <!-- Title of website -->
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-7 col-sm-12">
+            <h1>El Libro De Las Ideas</h1>
+            <p>
+              Una colección espeluznante de historias de aventuras que es tan grande y fascinante que si la abres es posible que nunca más te vuelvan a ver: entra bajo tu propia responsabilidad.
+            </p>
+            <button type="button" class="btn btn-light px-5 py-2">Comprar por $200.00</button>
+          </div>
+          <div class="col-md-5 col-sm-12">
+            <img src="img/header-img.png" class="h-100 w-100" alt="book"/>
+          </div>
+        </div>
+      </div>
+    <!-- end title of website -->
+  </header>
+
+  <main>
+    <!-- section 1  -->
+    <section class="section-1">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="container-img">
+              <img src="img/close-up-of-flowers-256443.jpg" alt="flowers and book">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="panel text-center">
+              <h1>La pasión interior</h1>
+              <p class="pt-2">
+                Esta maravillosa colección de poesía sincera y apasionada y extractos de libros de cuentos describen los sentimientos, las luchas de la vida y los triunfos del hombre y la mujer urbanos.<br/>
+                <br/>
+                Este trabajo incluye homenajes a los seres queridos, la liberación y la lucha contra las presiones de la vida, la religión, la injusticia racial y, por supuesto, por último pero no menos importante, la pasión suprema entre amantes, entre otros.<br/>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end section1 -->
+
+    <!-- section 2 -->
+    <section class="section-2 container-fluid p-0">
+      <div class="cover">
+        <div class="content text-center">
+          <h1>Algunas características que nos hicieron únicos.</h1>
+          <p>
+            Nos esforzamos por ofrecer a los entusiastas de los libros la mejor experiencia de compra posible.
+          </p>
+      </div>
+      </div>
+      <div class="container-fluid text-center">
+        <div class="rectangle-container d-flex flex-md-row flex-wrap justify-content-center">
+          <div class="rectangle">
+            <h1>2354</h1>
+            <p>Clientes felices</p>
+          </div>
+          <div class="rectangle">
+            <h1>6784</h1>
+            <p>Tazas De Café</p>
+          </div>
+          <div class="rectangle">
+            <h1>2567</h1>
+            <p>Entradas enviadas</p>
+          </div>
+          <div class="rectangle">
+            <h1>2567</h1>
+            <p>Libros de Colección</p>
+          </div>
+        </div>
+      </div>
+      <div class="e-commerce text-center">
+        <h1>¡Compra lo que quieras!</h1>
+        <div class="cards">
+          <div class="d-flex flex-row justify-content-center flex-wrap">
+            <!-- First card -->
+            <div class="card" style="width: 19%; min-width:245px;">
+              <div class="card-body">
+                <h5 class="card-title">PDF</h5>
+                <p class="card-text">Con texto de apoyo a continuación como introducción natural.</p>
+                <div class="price">
+                  <h1>$77.99</h1>
+                  <a href="#" class="btn btn-secondary px-5 py-2 mb-5">Buy Now</a>
+                </div>
+              </div>
+            </div>
+            <!-- end first card -->
+            <!-- second card -->
+            <div class="card" style="width: 19%; min-width:245px;">
+              <div class="card-body">
+                <h5 class="card-title">E-Book</h5>
+                <p class="card-text">Con texto de apoyo a continuación como introducción natural.</p>
+                <div class="price">
+                  <h1>$86.99</h1>
+                  <a href="#" class="btn btn-secondary px-5 py-2 mb-5">Buy Now</a>
+                </div>
+              </div>
+            </div>
+            <!-- end second card -->
+
+            <!-- third card -->
+  
+            <div class="card" style="width: 19%; min-width:245px;">
+              <div class="card-body">
+                <h5 class="card-title">Print o Copy</h5>
+                <p class="card-text">Con texto de apoyo a continuación como introducción natural.</p>
+                <div class="price">
+                  <h1>$40.00</h1>
+                  <a href="#" class="btn btn-secondary px-5 py-2 mb-5">Comprar ahora</a>
+                </div>
+              </div>
+            </div>
+            <!-- end third card -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end section 2 -->
+
+    <!-- section 3 -->
+    <section class="section-3 p-0 text-center">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <h1 class="p-5 m-0">Descarga nuestra aplicación para todas las plataformas.</h1>
+          <p>Cada libro comprado marca la diferencia en la vida de alguien.</p>
+        </div>
+      </div>
+      <div class="platform row d-flex justify-content-center">
+        <div class="col-md-4 col-lg-4 col-12 col-xl-3 text-right d-flex justify-content-center">
+          <div class="desktop shadow-lg">
+            <div class="d-flex flex-row justify-content-center">
+              <img src="img/controlar.png" class=" pr-3"style="width: 60px;" alt="desktop">
+              <div class="text text-center">
+                <h3 class="pt-1 m-0">Computadora</h3>
+                <p class="p-0 m-0">En el sitio web</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-4 col-12 d-flex justify-content-center col-xl-3 text-left">
+          <div class="desktop shadow-lg">
+            <div class="d-flex flex-row justify-content-center">
+              <img src="img/telefono-inteligente.png" class="pr-3"style="width: 60px;" alt="desktop">
+              <div class="text text-center">
+                <h3 class="pt-1 m-0">Movíl</h3>
+                <p class="p-0 m-0">En la play store</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  <!-- end section 3 -->
+  <!-- section 4 -->
+  <section class="section-4 container-fluid">
+    <div class="container text-center">
+      <h1 class="text-dark">Lo que nuestros lectores dicen sobre nosotros...</h1>
+    </div>
+    <div class="team row d-flex justify-content-center">
+      <div class="col-md-6 col-lg-4 col-xl-4 col-10 text-center">
+        <div class="card shadow-lg d-inline-block">
+          <div class="card-img-top">
+            <img src="img/UI-face-3.jpg" alt="member" class="img-fluid border-radius p-4">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Jhon Smith</h3>
+            <p class="card-text">
+              Visitar esta librería ha sido una experiencia increíble. No solo tienen una variedad impresionante de títulos, sino que el ambiente invita a relajarte y disfrutar del momento. Los estantes están organizados de manera impecable, y siempre encuentras algo nuevo para descubrir. Además, el personal es muy atento y conoce mucho sobre literatura, lo que hace fácil recibir recomendaciones personalizadas. Definitivamente, un lugar que inspira y fomenta el amor por los libros.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl-4 col-10">
+        <!-- carousel started -->
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <!-- card 2 -->
+              <div class="card d-inline-block">
+                <div class="card-img-top d-flex justify-content-center align-items-center">
+                  <img src="img/UI-face-1.jpg" alt="member" class="img-fluid rounded-circle p-4">
+                </div>
+                <div class="card-body text-center">
+                  <h3 class="card-title">Allen Agnes</h3>
+                  <p class="card-text">
+                    La librería es un lugar maravilloso para perderse en el mundo de los libros. Desde clásicos hasta los lanzamientos más recientes, siempre encuentro algo interesante para leer. Me encanta cómo promueven eventos culturales y lecturas, lo que hace que sea mucho más que un lugar para comprar libros: es un espacio para la comunidad. Definitivamente un lugar que todos los amantes de la lectura deberían visitar.!
+                  </p>
+                </div>
+              </div>
+            <!-- end card 2 -->
+            </div>
+            <div class="carousel-item">
+              <!-- card 3 -->
+              <div class="card d-inline-block">
+                <div class="card-img-top d-flex justify-content-center align-items-center">
+                  <img src="img/UI-face-2.jpg" alt="member" class="img-fluid rounded-circle p-4">
+                </div>
+                <div class="card-body text-center">
+                  <h3 class="card-title">Drusso Powers</h3>
+                  <p class="card-text">
+                    Siempre es un placer visitar esta librería. No solo tienen una increíble selección de títulos, sino que también el personal es muy atento y está dispuesto a recomendarte el libro perfecto según tus intereses. El ambiente es acogedor y tranquilo, ideal para explorar sin prisas. Es, sin duda, mi lugar favorito para descubrir nuevas lecturas.
+                  </p>
+                </div>
+              </div>
+              <!-- end card 3 -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- card 4 -->
+      <div class="col-md-6 col-lg-4 col-xl-4 col-10 text-center card-3">
+        <div class="card shadow-lg d-inline-block">
+          <div class="card-img-top">
+            <img src="img/UI-face-4.jpg" alt="member" class="img-fluid border-radius p-4">
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Ana Rodriguez</h3>
+            <p class="card-text">
+              La organización y el diseño de esta librería hacen que sea un lugar único para los amantes de la lectura. La forma en que destacan los libros más recientes y los clásicos por igual demuestra una gran atención al detalle. Siempre encuentro algo nuevo que leer, y el ambiente inspira tranquilidad y curiosidad.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end section 4 -->
+  </main>
+  <footer class="p-5">
+    <div class="container-fluid">
+      <div class="row text-left">
+        <div class="col-md-12 col-lg-4 col-xl-4 col-12 mt-4">
+          <h1 class="text-light">Sobre nosotros</h1>
+          <p class="text-muted">En nuestra organización, somos apasionados por los libros y nos encontramos profundamente cautivados por el fascinante mundo de la lectura. Es por esto que decidimos crear una librería online, con el objetivo de hacer que el acceso a los libros sea más fácil y conveniente para todos los amantes de la lectura. Queremos que nuestros usuarios puedan disfrutar de sus libros favoritos en cualquier momento y lugar, sin barreras ni restricciones. Nuestro compromiso es ofrecer una experiencia de lectura digitalizada y accesible para todos.</p>
+          <p class="pt-3">Copyright ©2024 Todos los derechos reservados <span></span></p>
+        </div>
+        <div class="col-md-12 col-lg-5 col-xl-5 col-12 mt-4">
+          <h4 class="text-light">Hoja informativa</h4>
+          <p class="text-muted">Mantente actualizado</p>
+          <form action="" class="form-inline">
+            <div class="col pl-0">
+              <div class="input-group flex-nowrap">
+                <input type="text" class="input-group w-input m-0 bg-dark p-3" placeholder="Email">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <img src="img/proximo.png" alt="Arrow" style="width: 15px;">
+                </div>
+              </div>
+              </div>     
+            </div>
+          </form>
+        </div>
+        <div class="col-md-12 col-lg-3 col-xl-3 col-12 mt-4">
+          <h4 class="text-light">Síganos</h4>
+          <p class="text-muted">Seamos sociales</p>
+          <div class="colum d-flex flex-nowrap">
+            <img src="img/facebook.png" alt="facebook" style="width: 18px;" class="mr-3">
+            <img src="img/instagram.png" alt="instagram" style="width: 18px;" class="mr-3">
+            <img src="img/marca.png" alt="youtube" style="width: 20px;" class="mr-3">
+            <img src="img/gorjeo.png" alt="twitter" style="width: 20px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

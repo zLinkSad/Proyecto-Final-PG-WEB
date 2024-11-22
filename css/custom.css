@@ -1,0 +1,574 @@
+ *{
+   box-sizing: border-box;
+ }
+
+ html,body{
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  min-width: 484px;
+  /* font-size:13px; */
+ }
+
+ 
+
+/* google fonts */
+@font-face {
+  font-family: 'gibsonBold';
+  src: url('../fonts/gibson-bolditalic-webfont.woff') format('woff2'),
+       url('../fonts/gibson-bolditalic-webfont.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'fira_monoregular';
+  src: url('../fonts/firamono-regular-webfont.woff2') format('woff2'),
+       url('../fonts/firamono-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'signatra_regular';
+  src: url('../fonts/signatra-webfont.woff2') format('woff2'),
+       url('../fonts/signatra-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: 'montserratextralight';
+  src: url('../fonts/montserrat-extralight-webfont.woff2') format('woff2'),
+       url('../fonts/montserrat-extralight-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: 'montserratregular';
+  src: url('../fonts/montserrat-regular-webfont.woff2') format('woff2'),
+       url('../fonts/montserrat-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+/* end google fonts */
+
+:root{
+  --gibson-font:"gibsonBold",serif;
+  --bg-color: linear-gradient(to bottom, #dd2476, #b32fff); 
+  --signatra:"signatra_regular", sans-serif;
+  --fira-regular:"fira_monoregular", serif;
+  --monserrat_extra_light:'montserratextralight',sans-serif;
+  --monserrat_regular:'montserratregular', serif;
+
+}
+
+/* navbar of page */
+.navbar-expand-lg > .navbar-brand{
+  font-family: var(--signatra);
+  font-size: 3vw;
+  padding-left: 4rem;
+  color:white;
+  text-shadow: 1px 1px 1px rgb(87, 87, 87);
+}
+
+/* end navbar of page */
+
+/* background */
+header {
+  background: var(--bg-color);
+  color:white;
+  min-height: 100vh;
+}
+/* end background */
+
+/* navbar style */
+.dropdown-content{
+  display:none;
+  position: absolute;
+  color:white;
+  min-width:160px;
+  box-shadow: 0 2px 15px 0 rgba(0,0,0,0.2);
+  z-index: 1;
+
+}
+.dropdown-content a {
+  color:black;
+  padding:12px 16px;
+  text-decoration: none;
+  background-color: #ddd;
+  display:block;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+.dropdown-content a:hover{
+  background-color: rgb(220, 129, 243);
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+
+.navbar-nav .nav-item .nav-link{
+  color:white;
+  font-weight: bolder;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.navbar-nav .nav-item .nav-link:hover{
+  color:black;
+}
+
+.navbar.sticky > #navbarNav .nav-item .nav-link:hover{
+  font-weight: bolder;
+  color: rgb(204, 10, 204);
+}
+
+.navbar-nav .nav-item:last-child{
+  padding-right: 4em;
+}
+
+.navbar-nav .nav-item {
+  padding:0.8em;
+}
+
+/* end navbar style */
+
+/* title of page */
+header .row .col-md-5{
+  padding:4.2vmin;
+}
+
+header .row .col-md-7 {
+  padding:22vmin 1vmin;
+  padding-bottom: 15vmin;
+}
+
+header .row .col-md-7 h1 {
+  letter-spacing: 4px;
+  text-shadow: 1px -1px 1px black;
+  font-size: 8.5vmin;
+  font-weight:bold;
+  padding:0.1em 0em;
+}
+
+header .row .col-md-7 p{
+  padding:1vmin 5vmin;
+  font-family: var(--monserrat_regular);
+}
+
+header .container .col-md-7 button{
+  border-radius:30px;
+  font-weight: bolder;
+}
+
+/* end title of page */
+
+/* section 1 */
+
+.section-1{
+  padding:8vmin 0;
+}
+
+.section-1 .row .col-md-6 .container-img img {
+  opacity: 0.8;
+  border-radius: 0.2em;
+  width: 100%;
+}
+
+.section-1 .row .col-md-6:last-child{
+  position: relative;
+}
+
+.section-1 .row .col-md-6 .panel{
+  position: absolute;
+  top:7vmin;
+  left:-18vmin;
+  background: white;
+  border-radius: 3px;
+  text-align: left;
+  padding: 13vmin 5vmin 13vmin 5vmin;
+  box-shadow: 0 25px 42px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.section-1 .row .col-md-6 .panel h1 {
+  font-family: var(--signatra);
+  padding: 0.4em 0;
+  font-size: 2em;
+}
+
+.section-1 .row .col-md-6 .panel p {
+  font-family: var(--fira-regular);
+  font-size: 0.9em;
+  color: rgba(0,0,0,0.5);
+}
+/* end section 1 */
+
+/* section 2 */
+.cover{
+  width: 100%;
+  height: 60vmin;
+  background: url(../img/apple-magic-keyboard-1309766.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.cover .content {
+  background-color: rgba(131, 22, 255, 0.541);
+  height: 100%;
+  width: 100%;
+  padding-top: 19vmin;
+}
+
+.cover .content > h1 {
+  font-family: var(--gibson-font);
+  font-size: 6.5vmin;
+  color: white;
+}
+
+.cover .content h1 + p {
+  font-family: var(--gibson-font);
+  font-size: 3vmin;
+  color:#e5e5e5;
+}
+
+.rectangle-container .rectangle {
+  position: relative;
+  z-index: 1;
+  background-color: white;
+  width: 17rem;
+  height: 12rem;
+  padding-top: 3.5vmin;
+  margin: 1rem;
+  border-radius: .5em;
+  box-shadow: 1px 2px 40px 0 rgba(97, 12, 255, 0.603);
+}
+
+.rectangle-container{
+  margin-top: -15vmin;
+}
+
+.rectangle-container .rectangle h1 {
+  font-size: 5rem;
+  color:rgba(255, 0, 212, 0.562);
+  text-shadow: 1px -1px 1px black;
+}
+
+.rectangle-container .rectangle p {
+  font-family: var(--gibson-font);
+}
+
+.e-commerce > h1 {
+  padding-top: 15vmin;
+  padding-bottom: 0.1em;
+  font-family: var(--signatra);
+  font-size: 9vmin;
+}
+
+.e-commerce .cards .card {
+  width: 22rem;
+  margin: 3vmin;
+
+}
+
+.cards div{
+  padding: 0;
+  margin: 0;
+}
+
+.card .card-title {
+  background-color: rgba(231, 18, 203, 0.253);
+  padding: 1.4rem 2.5rem;
+  font-size: 3vmin;
+}
+
+.card .card-text{
+  padding: 2.5rem 3rem;
+  color:#0803039f;
+  font-family: var(--monserrat_regular);
+}
+
+.card-body .price {
+  background-color: rgba(195, 170, 196, 0.466);
+  border-top-right-radius:170px;
+  border-top-left-radius:170px;
+}
+
+.card-body .price > h1 {
+  font-size: 5vw;
+  padding: 1em 0.2em 0em 0.2em;
+}
+
+.price > a {
+  background-color: rgb(250, 42, 250);
+  border: none;
+}
+
+
+.price > a:hover{
+  background-color: rgba(248, 36, 248, 0.795);
+}
+/* end section 2 */
+
+/* section 3 */
+.section-3{
+  min-height: 60vmin;
+  margin-top: 15vmin;
+  background:rgb(184, 21, 224);
+}
+
+.section-3 .col-md-12 >h1 {
+  padding: 2em 0 0.5em 0;
+  color:whitesmoke;
+  font-size: 6vmin;
+  font-family: var(--gibson-font);
+}
+
+.section-3 .col-md-12 > p {
+  padding: 0 4rem;
+  padding-bottom: 1em;
+  color:#e5e5e5;
+  font-size: 3vmin;
+  font-family: var(--gibson-font);
+}
+
+.section-3 .desktop{
+  background-color: white;
+  display: inline-block;
+  border-radius: 3em;
+  padding: 3vmin 5.5vmin;
+  margin:1em;
+}
+
+.section-3 .desktop h3 {
+  font-size: 4vmin;
+}
+.section-3 .desktop p{
+  font-size: 2vmin;
+}
+
+.section-3 .row .col-md-12, .col-sm-12{
+  padding-right:15px;
+}
+
+
+.section-3 >  .platform.row {
+  margin-right: 0 !important;
+}
+
+
+.section-3 > .row {
+  margin-right: 0;
+}
+
+/* end section 3 */
+
+/* section 4 */
+.section-4 .container h1{
+  font-size: 8vmin;
+  padding-top: 14vmin;
+  font-family: var(--signatra);
+
+}
+
+.section-4 .team {
+  padding:10vmin 4vmin;
+
+}
+
+.section-4 .card .card-text{
+  padding:0.5em;
+}
+
+.border-radius{
+  border-radius: 340px;
+  height: 150px;
+}
+
+.section-4 .card-body .card-title {
+  font-family: var(--signatra);
+  font-size: 4.2vmin;
+}
+
+.section-4 .card-body .card-text{
+  font-family: var(--monserrat_extra_light);
+}
+
+.rounded-circle{
+  width: 150px;
+}
+/* end section 4  */
+
+@media(max-width:991px){
+  .section-1 .row .col-md-6 .panel{
+    padding: 3vmin 5vmin 3vmin 5vmin;
+    top:3vmin;
+  }
+}
+
+/* footer */
+footer{
+  background: #232526;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+footer .col-md-12 .text-light {
+  font-family: var(--monserrat_regular);
+}
+
+footer .col-md-12:nth-child(1){
+  font-family: var(--monserrat_extra_light);
+  color:rgb(211, 211, 211) !important;
+}
+
+footer .col-md-12 p > span{
+  font-family: var(--signatra);
+  font-size: 4vmin;
+  margin:0.3em;
+  color:rgb(204, 68, 193);
+}
+
+footer .col-md-12 .text-light + .text-muted{
+  font-family: var(--monserrat_extra_light);
+  color:rgb(206, 204, 204) !important;
+}
+
+footer input{
+  border:none !important;
+  height: 40px;
+  color:white;
+}
+
+footer input::placeholder{
+  color:white;
+}
+
+footer .input-group .input-group-text{
+  background: var(--bg-color);
+  border:none;
+}
+
+/* end footer */
+
+/* sticky navbar */
+.sticky{
+  position: fixed;
+  top:0;
+  width: 100%;
+  z-index:100;
+  transition: all 1.5s ease;
+}
+
+@media (max-width: 992px) {
+  .navbar.sticky > #navbarNav > ul > li > .dropdown > .dropdown-content {
+    margin-left: 120px ;
+    margin-top: -40px;
+    background-color: rgba(0,0,0,0.815);  
+  }
+  .navbar.sticky > #navbarNav > ul > li > .dropdown > .dropdown-content > a{
+    background-color: rgba(255,255,255,.1);
+    color: rgb(233, 229, 229);
+    border-left: 3px solid purple;
+  }
+  .navbar.sticky > #navbarNav > ul > li > .dropdown > .dropdown-content > a:hover{
+    background-color: rgba(255,255,255,.06);
+  }
+  
+  .navbar.sticky > #navbarNav > ul {
+    padding-left: 16px;
+  }
+}
+
+.navbar.sticky > #navbarNav {
+  margin: 2px -16px;
+}
+
+.bg-navbar {
+  background-color: rgba(0,0,0,0.815);
+}
+
+/* end sticky navbar */
+
+@media(max-width:575px){
+  .section-3 .platform .col-md-6{
+    justify-content: center;
+    align-items: center;
+  }
+  .section-3 .col-md-12 > p {
+  font-size: 4vmin;
+}
+}
+
+@media(min-width:1220px) and (max-width:1359px){
+  .navbar-expand-lg > .navbar-brand{
+    margin-left: 2vmin !important;
+    padding-left: 0 !important;
+  }
+}
+
+@media(max-width:1219px){
+  .navbar-expand-lg > .navbar-brand{
+    margin-left: 2vmin !important;
+    padding-left: 0 !important;
+
+  }
+
+  .navbar-nav .nav-item:last-child {
+    padding-right: 1.2em;
+}
+
+  .navbar-nav .nav-item {
+    padding: 0.4em;
+  }
+}
+
+@media(max-width:1066px){
+  /* .navbar-expand-lg > .navbar-brand {
+  font-size: 6vmin;
+} */
+
+  .navbar-nav .nav-item:last-child {
+    padding-right: 1em;
+  }
+}
+
+@media(max-width:991px) and (min-width:768px){
+  .card-3{
+    margin-top: 1.5rem !important;
+  }
+}
+  
+@media(min-width:1000px){
+  .w-input{
+    width: 75% !important;
+  }
+}
+
+@media(max-width:767px){
+  .section-1 .row .col-md-6 .panel {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .platform.row > div:last-child {
+    margin-bottom: 2em;
+  }
+
+  .section-4 .card {
+    margin-top: 10vmin;
+  }
+
+}
